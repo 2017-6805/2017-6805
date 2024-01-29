@@ -1,0 +1,28 @@
+while True:
+    try:
+        n = int(input('\nEnter the number of students in the group:'))
+        if n <0:
+            raise Exception
+        else:
+            break
+    except:
+        print('\n***Enter a positive numeric whole value for number of students***')
+
+mark_list = []
+
+print('\nEnter the student marks now\n')
+
+for i in range(1,n+1):
+    while True:
+        try:
+            mark = int(input())
+            if (mark<0 or mark >100):
+                raise Exception
+            else:
+                marks_list.append(mark)
+                break
+        except:
+            print('**Invalid mark** \nEnter again')
+                    
+            print('Marks list is as follows..')
+            print(marks_list)
